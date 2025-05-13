@@ -23,7 +23,7 @@ def about():
         api_key="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",
     )
     messages=[{"role": "user", "content": "Hello, how are you?"}],
-    result = client.chat.completions.create( model="Qwen/Qwen3-235B-A22B", messages=[ {"role": "system", "content": "You are a precise answering machine, like automated computer with direct and brief answers. You are instructed to get similar sentences from the list of sentences in parentheses. Just give the sentences from list but you can also give "null" (like computer does) for no similarity.  "}, { "role": "user", "content": "(The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of France?)" } ], max_tokens=200, )
+    result = client.chat.completions.create( model="Qwen/Qwen3-235B-A22B", messages=[ {"role": "system", "content": "You are a precise answering machine, like automated computer with direct and brief answers. You are instructed to get similar sentences from the list of sentences in parentheses. Just give the sentences from list but you can also give 'null' (like computer does) for no similarity.  "}, { "role": "user", "content": "(The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of France?)" } ], max_tokens=200, )
     print(result)
     
     return 'Results inference'
@@ -38,7 +38,7 @@ def about():
         api_key="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",
     )
     messages=[{"role": "user", "content": "Hello, how are you?"}],
-    result = client.chat.completions.create( model="meta-llama/Llama-2-70b-chat-hf", messages=[ {"role": "system", "content": "You are a precise answering machine, like automated computer with direct and brief answers. You are instructed to get similar sentences from the list of sentences in parentheses. Just give the sentences from list but you can also give "null" (like computer does) for no similarity.  "}, { "role": "user", "content": "(The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of France?)" } ], max_tokens=200, )
+    result = client.chat.completions.create( model="meta-llama/Llama-2-70b-chat-hf", messages=[ {"role": "system", "content": "You are a precise answering machine, like automated computer with direct and brief answers. You are instructed to get similar sentences from the list of sentences in parentheses. Just give the sentences from list but you can also give 'null' (like computer does) for no similarity.  "}, { "role": "user", "content": "(The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of France?)" } ], max_tokens=200, )
     print(result)
     
     return 'Results inference llama'
@@ -52,7 +52,7 @@ def about():
         api_key="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",
     )
     messages=[{"role": "user", "content": "Hello, how are you?"}],
-    result = client.chat.completions.create( model="microsoft/Phi-3.5-mini-instruct", messages=[ {"role": "system", "content": "You are a precise answering machine, like automated computer with direct and brief answers. You are instructed to get similar sentences from the list of sentences in parentheses. Just give the sentences from list but you can also give "null" (like computer does) for no similarity.  "}, { "role": "user", "content": "(The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of France?)" } ], max_tokens=200, )
+    result = client.chat.completions.create( model="microsoft/Phi-3.5-mini-instruct", messages=[ {"role": "system", "content": "You are a precise answering machine, like automated computer with direct and brief answers. You are instructed to get similar sentences from the list of sentences in parentheses. Just give the sentences from list but you can also give 'null' (like computer does) for no similarity.  "}, { "role": "user", "content": "(The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of France?)" } ], max_tokens=200, )
     print(result)
     # mistralai/Mistral-7B-Instruct-v0.3
     return 'Results inference model phi'
@@ -66,7 +66,7 @@ def about():
         api_key="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",
     )
     messages=[{"role": "user", "content": "Hello, how are you?"}],
-    result = client.chat.completions.create( model="mistralai/Mistral-7B-Instruct-v0.3", messages=[ {"role": "system", "content": "You are a precise answering machine, like automated computer with direct and brief answers. You are instructed to get similar sentences from the list of sentences in parentheses. Just give the sentences from list but you can also give "null" (like computer does) for no similarity.  "}, { "role": "user", "content": "(The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of France?)" } ], max_tokens=200, )
+    result = client.chat.completions.create( model="mistralai/Mistral-7B-Instruct-v0.3", messages=[ {"role": "system", "content": "You are a precise answering machine, like automated computer with direct and brief answers. You are instructed to get similar sentences from the list of sentences in parentheses. Just give the sentences from list but you can also give 'null' (like computer does) for no similarity.  "}, { "role": "user", "content": "(The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of France?)" } ], max_tokens=200, )
     print(result)
     # mistralai/Mistral-7B-Instruct-v0.3
     return 'Results inference model misral'
