@@ -22,34 +22,22 @@ def about():
         provider="hf-inference",
         api_key="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",
     )
-
-    result = client.table_question_answering(inputs={ "query": "How many stars does the transformers repository have?", "table": { "Repository": ["Transformers", "Datasets", "Tokenizers"], "Stars": ["36542", "4512", "3934"], "Contributors": ["651", "77", "34"], "Programming language": [ "Python", "Python", "Rust, Python and NodeJS" ] } }, model="google/tapas-base-finetuned-wtq",  )
-
+    completion = client.chat.completions.create( model="Qwen/Qwen3-235B-A22B", messages=[ { "role": "user", "content": "What is the capital of France?" } ], max_tokens=512, )
     print(result)
     
     return 'Results inference'
 
 
-# from huggingface_hub import InferenceClient
-
-# client = InferenceClient(
-#     provider="hf-inference",
-#     api_key="hf_xxxxxxxxxxxxxxxxxxxxxxxx",
+# # from huggingface_hub import InferenceClient
+# completion = client.chat.completions.create(
+#     model="Qwen/Qwen3-235B-A22B",
+#     messages=[
+#         {
+#             "role": "user",
+#             "content": "What is the capital of France?"
+#         }
+#     ],
+#     max_tokens=512,
 # )
 
-# result = client.table_question_answering(
-#     inputs={
-#     "query": "How many stars does the transformers repository have?",
-#     "table": {
-#         "Repository": ["Transformers", "Datasets", "Tokenizers"],
-#         "Stars": ["36542", "4512", "3934"],
-#         "Contributors": ["651", "77", "34"],
-#         "Programming language": [
-#             "Python",
-#             "Python",
-#             "Rust, Python and NodeJS"
-#         ]
-#     }
-# },
-#     model="google/tapas-base-finetuned-wtq",
-# )
+# print(completion.choices[0].message)
