@@ -1,1 +1,10 @@
-Flask==3.0.3
+Flask==3.0.0 
+langchain
+huggingface_hub
+Flask-Limiter
+langchain
+gunicorn
+requests
+html2text
+beautifulsoup4
+flask-cors
