@@ -22,7 +22,7 @@ def about():
         provider="hf-inference",
         api_key="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",
     )
-    completion = client.chat.completions.create( model="Qwen/Qwen3-235B-A22B", messages=[ { "role": "user", "content": "What is the capital of France?" } ], max_tokens=512, )
+    result = client.chat.completions.create( model="Qwen/Qwen3-235B-A22B", messages=[ { "role": "user", "content": "What is the capital of France?" } ], max_tokens=512, )
     print(result)
     
     return 'Results inference'
