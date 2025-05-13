@@ -5,20 +5,10 @@ from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
-from langchain.document_loaders import AsyncHtmlLoader
-
-from langchain.document_transformers import BeautifulSoupTransformer
-from langchain.document_transformers import Html2TextTransformer
-
-
-from langchain.utilities import GoogleSerperAPIWrapper 
-from langchain.agents import initialize_agent, Tool
-from langchain.agents import AgentType 
 from huggingface_hub import InferenceClient
-from pprint import pprint
 
 os.environ["SERPER_API_KEY"] = "4fb86c3b2a34c0110e8b9f7ff24d42e983d49876"
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
  
 app = Flask(__name__)
 CORS(app)
