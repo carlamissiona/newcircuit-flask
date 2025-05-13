@@ -30,7 +30,7 @@ def about():
 
 
 @app.route('/inference-llama')
-def about():
+def about2():
     from huggingface_hub import InferenceClient
 
     client = InferenceClient(
@@ -44,7 +44,7 @@ def about():
     return 'Results inference llama'
 
 @app.route('/inference-model-a')
-def about():
+def about3():
     from huggingface_hub import InferenceClient
 
     client = InferenceClient(
@@ -58,7 +58,7 @@ def about():
     return 'Results inference model phi'
 
 @app.route('/inference-model-b')
-def about():
+def about4():
     from huggingface_hub import InferenceClient
 
     client = InferenceClient(
