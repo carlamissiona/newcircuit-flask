@@ -1,8 +1,6 @@
 import os
 import requests  
-import json
-from langchain import HuggingFaceHub
-from langchain import PromptTemplate, LLMChain
+import json 
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 from huggingface_hub import InferenceClient
@@ -10,8 +8,7 @@ from huggingface_hub import InferenceClient
 os.environ["SERPER_API_KEY"] = "4fb86c3b2a34c0110e8b9f7ff24d42e983d49876"
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
  
-app = Flask(__name__)
-CORS(app)
+app = Flask(__name__) 
 
 @app.route('/')
 def home():
