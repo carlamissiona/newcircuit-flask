@@ -22,7 +22,7 @@ def about():
         provider="hf-inference",
         api_key="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",
     )
-    result = client.chat.completions.create( model="Qwen/Qwen3-235B-A22B", messages=[ { "role": "user", "content": "What is the capital of France?" } ], max_tokens=512, )
+    result = client.chat.completions.create( model="Qwen/Qwen3-235B-A22B", messages=[ { "role": "user", "content": "Give two similar or closely related sentence pair among these (The capital of France is paris, Paris is the capital of france, Paris isn't the capital of france, Manila is the capital of the Philippines?)" } ], max_tokens=50, )
     print(result)
     
     return 'Results inference'
